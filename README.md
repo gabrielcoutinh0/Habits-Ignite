@@ -40,7 +40,7 @@ cd frontend
 npm install
 
 cd server
-npm intall
+npm install
 
 # Rodar o backend
 npm run dev
