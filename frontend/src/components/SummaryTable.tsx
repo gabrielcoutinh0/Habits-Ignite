@@ -28,8 +28,8 @@ export function SummaryTable() {
   }, []);
 
   return (
-    <div className="w-full flex">
-      <div className="grid grid-rows-7 grid-flow-row gap-3">
+    <div className="w-full flex flex-col lg:flex-row">
+      <div className="grid grid-cols-7 grid-flow-col gap-3 lg:grid-rows-7 lg:grid-cols-none">
         {weekDays.map((weekDay, id) => {
           return (
             <div
@@ -42,7 +42,7 @@ export function SummaryTable() {
         })}
       </div>
 
-      <div className="grid grid-rows-7 grid-flow-col gap-3">
+      <div className="grid gap-3 grid-cols-7 grid-flow-row lg:grid-rows-7 lg:grid-flow-col lg:grid-cols-none">
         {summary.length > 0 &&
           summaryDates.map((date) => {
             const dayInSummary = summary.find((day) => {
